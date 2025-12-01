@@ -4,6 +4,8 @@ body, * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background:#f57722;
+    background:#ff9d2a;
 }
 
 h1 {
@@ -55,4 +57,14 @@ input[type="submit"] {
     border: none;
     padding: .375rem 1rem;
     margin-top: 10px;
+}
+
+table {
+width:100%;
+border:1px solid black;
+}
+th, td {
+padding:5px 0px;
+text-align:center;
+background:#fff;
 }

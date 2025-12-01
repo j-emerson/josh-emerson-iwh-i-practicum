@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Practicum Reviewers
+
+        <a href="/update-cobj">Add to this table</a>
+
+        table
+            tr
+                th Name
+                th Favorite Custom Object
+                th Practicum Experirence
+            each practicum_reviewer in data
+                tr
+                    td #{practicum_reviewer.properties.name}
+                    td #{practicum_reviewer.properties.favorite_custom_object}
+                    td #{practicum_reviewer.properties.practicum_experience}
