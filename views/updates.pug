@@ -7,11 +7,16 @@ html
     body
         h1 Update Practicum Reviewers Table
 
-        <a href="/">Return to the homepage</a>
+        a(href='/') Return to the homepage
 
-        //- .cards
-        //-     each practicum_reviewer in data
-        //-         .card
-        //-             h2.card__name #{practicum_reviewer.properties.name} 
-        //-             h3.card__name #{practicum_reviewer.properties.favorite_custom_object}
-        //-             p.card__email #{practicum_reviewer.properties.practicum_experience}
+    form(action="/update-cobj", method="POST")
+      div
+        label(for="name") Name:
+        input(type="text", id="name", name="name", required)
+      div
+        label(for="favorite_custom_object") Favorite Custom Object:
+        input(type="text", id="favorite_custom_object", name="favorite_custom_object", required)
+      div
+        label(for="practicum_experience") Practicum Experience:
+        input(type="text", id="practicum_experience", name="practicum_experience", required)
+      button(type="submit") Submit
